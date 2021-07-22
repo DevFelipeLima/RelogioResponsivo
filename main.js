@@ -51,4 +51,29 @@ const relogiodig= () =>{
 }
 setInterval(relogiodig, 1000)
 
+const botaoTema = document.getElementById('botaoTema')
+const noturno = 'noturno'
+const iconeTema = 'bxs-sun'
+
+const temaSelecionado = localStorage.getItem('tema-selecionado')
+const iconeSelecionado = localStorage.getItem('icone-selecionado')
+
+const getTemaAtual = () => 
+document.body.classList.contains(noturno) ? 'dark' : 'light'
+const getIconeAtual = () => botaoTema.classList.contains(iconeTema) ? 'bxs-moon' : 'bxs-sun'
+
+if(temaSelecionado){
+    document.body.classList[temaSelecionado === 'dark' ? 'add' : 'remove'](noturno)
+    botaoTema.classList[iconeSelecionado === 'bxs-moon' ? 'add' : 'remove'](iconeTema)
+}
+
+botaoTema.addEventListener('click', () => {
+    document.body.classList.toggle(noturno)
+    botaoTema.classList.toggle(iconeTema)
+
+    localStorage.setItem('tema-selecionado', getTemaAtual())
+    localStorage.setItem('icone-selecionado', getIconeAtual())
+})
+
+
 

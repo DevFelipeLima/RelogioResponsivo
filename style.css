@@ -10,7 +10,7 @@
     --cor-texto: hsl(var(--matriz), 12%, 35%);
     --cor-luz-texto: hsl(var(--matriz), 12%, 49%);
     --white-color: #FFF;
-    --cor-body: hsl(var(---matriz), 24%, 94%);
+    --cor-body: rgb(234, 247, 242);
 
     --fonte-body: 'Poppins', sans-serif;
     --max-tam-fonte: 3rem ;
@@ -92,8 +92,9 @@ a{
 body.noturno{
     --cor-titulo: hsl(var(--matriz), 12%, 95%);
     --cor-texto: hsl(var(--matriz), 12%, 75%);
-    --cor-body: hsl(var(---matriz), 10%, 16%);
+    --cor-body: rgb(22, 29, 26);
 
+    
 }
 
 .tema{
